@@ -211,6 +211,8 @@ class StubGen:
         # Target filename, only needed for recursive stub generation
         self.output_file = output_file
 
+        # Key function for sorting module member names
+        # if 'as-defined', members are sorted in the order they appear in the module __dict__
         self.member_sort = member_sort
 
         # ---------- Internal fields ----------
