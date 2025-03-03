@@ -179,7 +179,7 @@ class StubGen:
         patterns: List[ReplacePattern] = [],
         quiet: bool = True,
         output_file: Optional[Path] = None,
-        member_sort: Optional[Callable[[tuple[str, Any]], Any]] | Literal['as-defined'] = None,
+        member_sort: Optional[Union[Callable[[Tuple[str, Any]], Any], Literal['as-defined']] = None,
     ) -> None:
         # Module to check for name conflicts when adding helper imports
         self.module = module
